@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp"
+        android:background="@drawable/back1">
+        <TextView
+            android:id="@+id/headingtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/choose_your_bicycle"
+            android:textSize="25sp"
+            />
+        <TextView
+            android:id="@+id/locationtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/headingtv"
+            android:text="Location: "
+            android:layout_marginTop="50dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/loctv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/locationtv"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="@id/locationtv"
+            android:layout_marginStart="5dp"
+            />
+
+
+        <TextView
+            android:id="@+id/bicselecttv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_bicycle"
+            app:layout_constraintTop_toBottomOf="@id/locationtv"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="18sp"
+            android:layout_marginTop="50dp"
+            />
+        <Spinner
+            android:id="@+id/bicyclespinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/bicselecttv"
+            app:layout_constraintStart_toEndOf="@id/bicselecttv"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="-13dp"
+            />
+        <TextView
+            android:id="@+id/plantv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose your plan: "
+            app:layout_constraintTop_toBottomOf="@id/bicselecttv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="20sp"
+            android:layout_marginTop="50dp"/>
+
+        <ListView
+            android:id="@+id/planlist"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            app:layout_constraintTop_toBottomOf="@id/plantv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="50dp"
+            />
+
+        <Button
+            android:id="@+id/proceed_button_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/planlist"
+            android:layout_marginTop="30dp"
+            android:text="@string/proceed"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
